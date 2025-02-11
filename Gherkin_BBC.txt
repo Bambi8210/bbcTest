@@ -1,0 +1,42 @@
+Feature: Fetch rugby six nations results
+
+  Scenario: Fetching participants for a valid tournament
+    Given the tournament name is "six-nations"
+    When I send a GET request to "urn=urn:bbc:sportsdata:rugby-union:tournament:six-nations"
+    Then the response status code should be 200
+    And the response body should contain an array of 6 'participants'
+    And the response body should include the following in the 'participants' array:
+      | participants
+      | England
+      | Ireland
+      | Scotland
+      | Wales
+      | Italy
+      | France
+
+  Scenario: Fetching a non-existent tournament
+    Given the league name is "six-nations"
+    When I send a GET request to "urn=urn:bbc:sportsdata:rugby-union:tournament:six-nstion"
+    Then the response status code should be 404
+    And the response body should contain "page not found"
+
+  Scenario: Fetching participants details for the tournament
+    Given the tournament name 'six-ntions' is provided
+    When I send a GET request to "urn=urn:bbc:sportsdata:rugby-union:tournament:six-nations"
+    Then the response status code should be 200
+    And the response body should include the following for each 'participant':
+	  |teamId
+	  |teamUrn
+	  |team
+	  |name
+	  |shortName
+	  |rank
+	  |played
+	  |won
+	  |lost
+	  |pointsFor
+	  |pointsAgainst
+	  |drawn
+	  |pointsDiff
+	  |bonus
+	  |points
