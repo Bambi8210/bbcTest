@@ -16,8 +16,10 @@ This Cypress framework provides a set of custom scripts for testing the API end 
 
 ## Setup Projct Environment
 
-1. Create Project Folder, suggest C:\Users\
-2. Download and Extract the contents of bbcProject.zip to this directory
+1. Clone or Download the Project
+   - Access the prjoect at the page https://github.com/Bambi8210/bbcTest.git
+   - or Download and Extract the contents of bbcProject.zip
+2. Create a new folder for the project, suggest `C:\Users\<user>\TechTest
 
 ## Project Configuration
 
