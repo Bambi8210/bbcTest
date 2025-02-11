@@ -40,6 +40,6 @@ This Cypress framework provides a set of custom scripts for testing the API end 
 
 # Additional Information
 
-`Run All` feature is currently disabled so each scenario spec will need to be run individually.
-`Gherkin_BBC.txt` includes the manual test plan
-Currently `scenario5_simple` is failing on the assertion section
+1. `Run All` feature is currently disabled so each scenario spec will need to be run individually.
+2. `Gherkin_BBC.txt` includes the manual test plan
+3. Currently `scenario5_simple` is failing on the assertion section
